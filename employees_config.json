@@ -1,0 +1,208 @@
+{
+  "employees": [
+    {
+      "sap_number": "9566838",
+      "employee_name": "Barsbold",
+      "level": "senior",
+      "ot_leader_name": "Gandeleg Ganbaatar",
+      "cost_code": "49022801",
+      "po_code": "3106789574",
+      "product_code": null
+    },
+    {
+      "sap_number": "9471634",
+      "employee_name": "Tsogttulga",
+      "level": "senior",
+      "ot_leader_name": "Uuganbayar Ganbaatar, Myagmarsuren Sanaakhorol",
+      "cost_code": "49056708",
+      "po_code": "3106789575",
+      "product_code": null
+    },
+    {
+      "sap_number": null,
+      "employee_name": "Zoljargal",
+      "level": "senior",
+      "ot_leader_name": "Uuganbayar Ganbaatar, Myagmarsuren Sanaakhorol",
+      "cost_code": "49056708",
+      "po_code": "3106789575",
+      "product_code": null
+    },
+    {
+      "sap_number": "9552540",
+      "employee_name": "Urtnasan",
+      "level": "senior",
+      "ot_leader_name": "Uuganbayar Ganbaatar, Myagmarsuren Sanaakhorol",
+      "cost_code": "49056708",
+      "po_code": "3106789575",
+      "product_code": null
+    },
+    {
+      "sap_number": "9577859",
+      "employee_name": "Badral",
+      "level": "senior",
+      "ot_leader_name": "Uuganbayar Ganbaatar, Myagmarsuren Sanaakhorol",
+      "cost_code": "49056708",
+      "po_code": "3106789575",
+      "product_code": null
+    },
+    {
+      "sap_number": "9578792",
+      "employee_name": "Jargalsaikhan",
+      "level": "junior",
+      "ot_leader_name": "Munkhchimeg Damdinsuren",
+      "cost_code": "49056709",
+      "po_code": "3106789577",
+      "product_code": null
+    },
+    {
+      "sap_number": "9530800",
+      "employee_name": "Tsogtbayar",
+      "level": "senior",
+      "ot_leader_name": "Khorolsuren Ganzorig",
+      "cost_code": "49011406",
+      "po_code": "3106789583",
+      "product_code": null
+    },
+    {
+      "sap_number": "9566125",
+      "employee_name": "Jamsranjav",
+      "level": "senior",
+      "ot_leader_name": "Khorolsuren Ganzorig",
+      "cost_code": "49011406",
+      "po_code": "3106789583",
+      "product_code": null
+    },
+    {
+      "sap_number": null,
+      "employee_name": "Undarmal",
+      "level": "junior",
+      "ot_leader_name": "Gankhuyag Galbadrakh",
+      "cost_code": "49071227",
+      "po_code": "3106789584",
+      "product_code": null
+    },
+    {
+      "sap_number": "9580465",
+      "employee_name": "Bilegjargal",
+      "level": "senior",
+      "ot_leader_name": "Munkhbayar Mishig",
+      "cost_code": "49071226",
+      "po_code": "3106789606",
+      "product_code": null
+    },
+    {
+      "sap_number": null,
+      "employee_name": "Tsagaantsooj",
+      "level": "junior",
+      "ot_leader_name": "Munkh-Erdene Amarsanaa",
+      "cost_code": "49011400",
+      "po_code": "3106789579",
+      "product_code": null
+    },
+    {
+      "sap_number": "9548971",
+      "employee_name": "Anar",
+      "level": "junior",
+      "ot_leader_name": "Ganbat Sukh",
+      "cost_code": "49090417",
+      "po_code": "3106789612",
+      "product_code": null
+    },
+    {
+      "sap_number": null,
+      "employee_name": "Khanlamaa",
+      "level": "junior",
+      "ot_leader_name": "Ganbat Sukh",
+      "cost_code": "49090417",
+      "po_code": "3104808953",
+      "product_code": null
+    },
+    {
+      "sap_number": "9318269",
+      "employee_name": "Shajinbat",
+      "level": "senior",
+      "ot_leader_name": "Ganbat Sukh",
+      "cost_code": "49090417",
+      "po_code": "3104801353/ 3106789609",
+      "product_code": null
+    },
+    {
+      "sap_number": null,
+      "employee_name": "Amarbat",
+      "level": "junior",
+      "ot_leader_name": "Ganbat Sukh",
+      "cost_code": "49090417",
+      "po_code": "3104808950/ 3106789615",
+      "product_code": null
+    },
+    {
+      "sap_number": null,
+      "employee_name": "Battulga",
+      "level": "junior",
+      "ot_leader_name": "Ganbat Sukh",
+      "cost_code": "49090417",
+      "po_code": "3104808950/ 3106789615",
+      "product_code": null
+    },
+    {
+      "sap_number": "9464821",
+      "employee_name": "Sergelen",
+      "level": "junior",
+      "ot_leader_name": "Ganbat Sukh",
+      "cost_code": "49090417",
+      "po_code": "3104799438/ 3106789615",
+      "product_code": null
+    },
+    {
+      "sap_number": "9361022",
+      "employee_name": "Khaliun",
+      "level": "senior",
+      "ot_leader_name": "Ganbat Sukh",
+      "cost_code": "49090417",
+      "po_code": "3104808950/ 3106789615",
+      "product_code": null
+    },
+    {
+      "sap_number": "9404523",
+      "employee_name": "Jargalan",
+      "level": "senior",
+      "ot_leader_name": "Ganbat Sukh",
+      "cost_code": "49090417",
+      "po_code": "3104808950/ 3106789615",
+      "product_code": null
+    },
+    {
+      "sap_number": "1006537",
+      "employee_name": "Uuganbayar",
+      "level": "junior",
+      "ot_leader_name": "Ganbat Sukh",
+      "cost_code": "49090417",
+      "po_code": "3104808950",
+      "product_code": null
+    },
+      {
+      "sap_number": "1006537",
+      "employee_name": "Munkhtur",
+      "level": "senior",
+      "ot_leader_name": "Ganbat Sukh",
+      "cost_code": "49056708",
+      "po_code": "3106789575",
+      "product_code": null
+    }
+  ],
+  "company": {
+    "invoice_recipient": "Оюу толгой ХХК",
+    "recipient_address": "Монгол улс, Улаанбаатар - 14240,\nСүхбаатар дүүрэг, Чингисийн өргөн чөлөө - 15, \"Моннис\" цамхаг",
+    "recipient_phone": "+(976) - (11) - 331880, д/у: 3800  Факс: +(976)-(11)-331890",
+    "seller_name": "Л. Анужин",
+    "seller_office_phone": "72222828",
+    "seller_mobile": "95001168",
+    "seller_email": "anujin.l@novelsoft.mn",
+    "bank_name": "ХХБанк",
+    "bank_account": "10 0004000 435005688 (₮)"
+  },
+  "pricing": {
+    "junior_unit_price": 25200,
+    "senior_unit_price": 32500
+  }
+}
