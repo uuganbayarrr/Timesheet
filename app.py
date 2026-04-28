@@ -232,6 +232,9 @@ def enrich_header(header, emp_lookup):
         pos = (header.get("position") or "").lower()
         header["level"] = "senior" if "senior" in pos else "junior"
 
+    # Convert total_hours to float
+    header["total_hours"] = float(header.get("total_hours", 0) or 0)
+
     return header
 
 # ═══════════════════════════════════════════════════════════
@@ -1625,7 +1628,7 @@ def fill_k2_invoice_descriptions(rows: List[Dict], y: str, m: str, po_code: str)
 # STREAMLIT UI
 # ═══════════════════════════════════════════════════════════
 st.set_page_config(page_title="Timesheet Processor", page_icon="🗓️", layout="wide")
-st.title("Oyu Tolgoi Timesheet PDF generator")
+st.title("Oyu Tolgoi Timesheet PDF generator v2ß")
 st.markdown(
     "Upload **PDF** timesheets эсвэл **Excel** project list (.xlsx). "
     "Excel → **6 хуудасны PDF**: хуудас 1-2 бусад (Senior→Developer нэхэмжлэх+зарлага), "
@@ -1781,6 +1784,7 @@ with tab_ts:
             for f in uploaded_files:
                 for emp in parse_pdf(f.read()):
                     emp["header"] = enrich_header(emp["header"], emp_lookup)
+                    emp["header"]["unit_price"] = unit_price(emp["header"], pricing)
                     all_emp.append(emp)
 
         if not all_emp:
@@ -1813,7 +1817,7 @@ with tab_ts:
                             "Total ₮": f"{e['total_hours'] * e['unit_price']:,.0f}",
                             "Cost Code": e["cost_code"],
                         }
-                        for e in data["employees"]
+                        for e in members
                     ]
                     st.dataframe(table_rows, use_container_width=True, hide_index=True)
 
