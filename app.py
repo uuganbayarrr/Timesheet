@@ -1621,7 +1621,7 @@ def fill_k2_invoice_descriptions(rows: List[Dict], y: str, m: str, po_code: str)
 # STREAMLIT UI
 # ═══════════════════════════════════════════════════════════
 st.set_page_config(page_title="Timesheet Processor", page_icon="🗓️", layout="wide")
-st.title("Oyu Tolgoi Timesheet PDF generator v2ß")
+st.title("Oyu Tolgoi Timesheet PDF generator v3")
 st.markdown(
     "Upload **PDF** timesheets эсвэл **Excel** project list (.xlsx). "
     "Excel → **6 хуудасны PDF**: хуудас 1-2 бусад (Senior→Developer нэхэмжлэх+зарлага), "
