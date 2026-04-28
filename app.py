@@ -298,24 +298,14 @@ def build_invoice(emp_list, pricing, company, doc_number="", doc_date="2/25/2026
     R = 1
 
     if logo_path and os.path.exists(logo_path):
-        # Set the image size and position
         img = XLImage(logo_path)
         img.width = 160
         img.height = 30
-        
-        # Anchor the image to cell F2
-        img.anchor = "F2"  # Anchor the image to cell F2 which will span across merged cells F2:H2
+        img.anchor = "F2"
         ws.add_image(img)
 
-        # Merge cells F2:H2 to create the space for the image
-        ws.merge_cells("F2:H2")  # Merge columns F, G, and H in row 2
-        ws["F2"] = ""  # Leave the merged cells blank to create the space
-
-        # Adjust the column widths to make the image centered
-        # Increase the widths of F, G, and H columns to make the space wider
-        ws.column_dimensions['F'].width = 12  # Adjust to create space for the image
-        ws.column_dimensions['G'].width = 12  # Adjust to create space for the image
-        ws.column_dimensions['H'].width = 12  # Adjust to create space for the image
+        ws.merge_cells("F2:G2")
+        ws["F2"] = ""
 
     # Continue with the rest of your layout
     ws.row_dimensions[R].height = 18
@@ -493,6 +483,8 @@ def build_invoice(emp_list, pricing, company, doc_number="", doc_date="2/25/2026
     sc(ws, R, 6, "И-мэйл:", size=9, h="right")
     sc(ws, R, 7, company.get("seller_email", "anujin.l@novelsoft.mn"), size=9, color=MID_BLUE)
 
+    ws.print_area = f"A1:G{R}"
+
     return wb_to_pdf_bytes(wb)
 
 # ═══════════════════════════════════════════════════════════
@@ -554,18 +546,16 @@ def build_zarlagiin(emp_list, pricing, company, doc_number="", doc_date=""):
     gdate = _green_box_border()
 
     ws.row_dimensions[R].height = 44
-    sc(ws, R, 1, "Хүлээн авагчийн нэр:", size=9, bdr=info_border)
-    mc(ws, R, 2, R, 3,
-       value=company.get("invoice_recipient", "Оюу толгой ХХК"),
+    mc(ws, R, 1, R, 2, value="Хүлээн авагчийн нэр:", size=9, bdr=info_border)
+    sc(ws, R, 3, company.get("invoice_recipient", "Оюу толгой ХХК"),
        bold=True, size=10, h="center", bdr=info_border)
     sc(ws, R, 4, "Дугаар:", size=9, bdr=info_border)
     mc(ws, R, 5, R, 6, value=doc_number, size=10, h="center", bdr=info_border)
     R += 1
 
     ws.row_dimensions[R].height = 44
-    sc(ws, R, 1, "Хүргэх хаяг:", size=9, v="top", bdr=info_border)
-    mc(ws, R, 2, R, 3,
-       value=company.get("recipient_address", ""),
+    mc(ws, R, 1, R, 2, value="Хүргэх хаяг:", size=9, v="top", bdr=info_border)
+    sc(ws, R, 3, company.get("recipient_address", ""),
        size=9, wrap=True, v="top", bdr=info_border)
     sc(ws, R, 4, "Огноо:", size=9, bdr=info_border)
     mc(ws, R, 5, R, 6, value=doc_date, size=10, h="center", bdr=info_border)
@@ -641,6 +631,9 @@ def build_zarlagiin(emp_list, pricing, company, doc_number="", doc_date=""):
         ws.cell(R, cc).border = Border(top=_s("medium", BLACK))
 
     seller = "/" + company.get("seller_name", "Л. Анужин") + "/"
+
+    R += 1
+    ws.row_dimensions[R].height = 15
 
     R += 1
     ws.row_dimensions[R].height = 20
@@ -1680,7 +1673,7 @@ with tab_ts:
 
     if not uploaded_files:
         c1, c2 = st.columns(2)
-        c1.info("**PDF:** олон ажилтан, хуудас бүр → нэхэмжлэх + зарлага + timesheet хүснэгт")
+        c1.info("**PDF:** олон ажилтан, хуудас бүр → нэхэмжлэх + зарлага")
         c2.info(
             "**Excel:** 6 хуудас — хуудас 1 бусад нэхэмжлэх (Senior→Developer), "
             "хуудас 2 зарлага, хуудас 3-4 Shajinbat, хуудас 5-6 Sergelen"
@@ -1868,10 +1861,8 @@ with tab_ts:
                         [h], pricing, company,
                         meta["zar_number"], meta["doc_date"])
 
-                    ts_pdf = build_timesheet_pdf(h, emp.get("rows") or [])
-
-                    # Нэг ажилтны 3 документ дараалан нэмнэ
-                    all_pdfs.extend([inv_pdf, zar_pdf, ts_pdf])
+                    # Нэг ажилтны 2 документ дараалан нэмнэ (нэхэмжлэх + зарлага)
+                    all_pdfs.extend([inv_pdf, zar_pdf])
 
             big_pdf = merge_pdfs(all_pdfs)
 
