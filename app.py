@@ -353,8 +353,8 @@ def build_invoice(emp_list, pricing, company, doc_number="", doc_date=""):
     # ── Header + logo ──
     if logo_path and os.path.exists(logo_path):
         img = XLImage(logo_path)
-        img.width, img.height = 200, 38
-        img.anchor = "E1"
+        img.width, img.height = 195, 35
+        img.anchor = "E2"
         ws.add_image(img)
 
     ws.row_dimensions[1].height = 16
