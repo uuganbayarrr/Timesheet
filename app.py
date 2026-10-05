@@ -376,7 +376,7 @@ def build_invoice(emp_list, pricing, company, doc_number="", doc_date=""):
     # ── Recipient block (dotted) ──
     R = 6
     ws.row_dimensions[R].height = 20
-    mc(ws, R, 1, R, 4, "ХЭНД:", size=9, bdr=dot)
+    mc(ws, R, 1, R, 3, "ХЭНД:", size=9, bdr=dot)
     mc(ws, R, 3, R, 5, company.get("invoice_recipient", "Оюу толгой ХХК"),
        bold=True, size=10, bdr=dot)
     sc(ws, R, 6, "ДУГААР:", size=9, bdr=dot)
@@ -384,7 +384,7 @@ def build_invoice(emp_list, pricing, company, doc_number="", doc_date=""):
 
     R += 1
     ws.row_dimensions[R].height = 34
-    mc(ws, R, 1, R, 4, "ХАЯГ:", size=9, bdr=dot)
+    mc(ws, R, 1, R, 3, "ХАЯГ:", size=9, bdr=dot)
     mc(ws, R, 3, R, 5, company.get("recipient_address", DEFAULT_RECIPIENT_ADDR),
        size=9, wrap=True, bdr=dot)
     sc(ws, R, 6, "ОГНОО:", size=9, bdr=dot)
@@ -392,7 +392,7 @@ def build_invoice(emp_list, pricing, company, doc_number="", doc_date=""):
 
     R += 1
     ws.row_dimensions[R].height = 20
-    mc(ws, R, 1, R, 4, "УТАС:", size=9, bdr=dot)
+    mc(ws, R, 1, R, 3, "УТАС:", size=9, bdr=dot)
     mc(ws, R, 3, R, 5, company.get("recipient_phone", DEFAULT_RECIPIENT_PHONE),
        size=9, bdr=dot)
     mc(ws, R, 6, R, 7, f"РО {po}", bold=True, size=10, h="center", bdr=dot)
@@ -972,18 +972,18 @@ def build_project_invoice(
     # RECIPIENT BLOCK
     # -----------------------------
     ws.row_dimensions[R].height = 22
-    sc(ws, R, 5, "ХЭНД:", bold=False, size=9, bdr=lb)
+    sc(ws, R, 3, "ХЭНД:", bold=False, size=9, bdr=lb)
     mc(
         ws, R, 2, R, 4,
         value=company.get("invoice_recipient", "Оюу толгой ХХК"),
         bold=False, size=10, bdr=vb
     )
-    sc(ws, R, 5, "ДУГААР:", bold=True, size=9, bdr=lb)
+    sc(ws, R, 3, "ДУГААР:", bold=True, size=9, bdr=lb)
     mc(ws, R, 6, R, 7, value=doc_number, size=10, h="center", bdr=vb)
     R += 1
 
     ws.row_dimensions[R].height = 46
-    sc(ws, R, 5, "ХАЯГ:", bold=False, size=9, v="top", bdr=lb)
+    sc(ws, R, 3, "ХАЯГ:", bold=False, size=9, v="top", bdr=lb)
     mc(
         ws, R, 2, R, 4,
         value=company.get("recipient_address", ""),
