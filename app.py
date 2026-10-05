@@ -997,7 +997,7 @@ def build_project_invoice(
     sc(ws, R, 5, "УТАС:", bold=False, size=9, bdr=lb)
     mc(ws, R, 2, R, 4, value=company.get("recipient_phone", ""), size=9, bdr=vb)
     sc(ws, R, 5, "PO:", bold=True, size=10, bdr=lb)
-    po_code  = "PO " + STR(po_code);
+    po_code  = "PO " + str(po_code);
     mc(ws, R, 6, R, 7, value=po_code, bold=True, size=10, h="center", bdr=vb)
     R += 1
 
