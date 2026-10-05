@@ -440,7 +440,7 @@ def build_invoice(emp_list, pricing, company, doc_number="", doc_date="2/25/2026
     R += 2
     ws.row_dimensions[R].height = 18
     mc(ws, R, 2, R, 4, value="БАТАЛГААЖУУЛСАН:", size=9, h="center")
-    seller = company.get("seller_name", "Л. Анужин")
+    seller = company.get("seller_name", "Ө.Мөнхжаргал")
 
     R += 1
     ws.row_dimensions[R].height = 18
@@ -476,12 +476,12 @@ def build_invoice(emp_list, pricing, company, doc_number="", doc_date="2/25/2026
     R += 1
     ws.row_dimensions[R].height = 18
     sc(ws, R, 6, "Гар утас:", size=9, h="right")
-    sc(ws, R, 7, company.get("seller_mobile", "95001168"), size=9)
+    sc(ws, R, 7, company.get("seller_mobile", "86635308"), size=9)
 
     R += 1
     ws.row_dimensions[R].height = 18
     sc(ws, R, 6, "И-мэйл:", size=9, h="right")
-    sc(ws, R, 7, company.get("seller_email", "anujin.l@novelsoft.mn"), size=9, color=MID_BLUE)
+    sc(ws, R, 7, company.get("seller_email", "munkhjargal.u@novelsoft.mn"), size=9, color=MID_BLUE)
 
     ws.print_area = f"A1:G{R}"
 
@@ -630,7 +630,7 @@ def build_zarlagiin(emp_list, pricing, company, doc_number="", doc_date=""):
     for cc in range(1, 7):
         ws.cell(R, cc).border = Border(top=_s("medium", BLACK))
 
-    seller = "/" + company.get("seller_name", "Л. Анужин") + "/"
+    seller = "/" + company.get("seller_name", "Ө.Мөнхжаргал") + "/"
 
     R += 1
     ws.row_dimensions[R].height = 15
@@ -1086,7 +1086,7 @@ def build_project_invoice(
     c.border = _b()
     c.number_format = MONEY
 
-    seller = company.get("seller_name", "Л. Анужин")
+    seller = company.get("seller_name", "Ө.Мөнхжаргал")
 
     # -----------------------------
     # SIGNATURE
@@ -1131,11 +1131,11 @@ def build_project_invoice(
 
     R += 1
     sc(ws, R, 6, "Гар утас:", size=9, h="right")
-    sc(ws, R, 7, company.get("seller_mobile", "95001168"), size=9)
+    sc(ws, R, 7, company.get("seller_mobile", "86635308"), size=9)
 
     R += 1
     sc(ws, R, 6, "И-мэйл:", size=9, h="right")
-    sc(ws, R, 7, company.get("seller_email", "anujin.l@novelsoft.mn"), size=9, color=MID_BLUE)
+    sc(ws, R, 7, company.get("seller_email", "munkhjargal.u@novelsoft.mn"), size=9, color=MID_BLUE)
 
     # -----------------------------
     # PRINT AREA
@@ -1431,7 +1431,7 @@ def build_project_zarlagiin(po_code, po_data, company, doc_number="", doc_date="
         ws.cell(R, c).border = Border(top=_s("medium", BLACK), bottom=_s("medium", BLACK))
 
     # ========= Footer =========
-    seller = company.get("seller_name", "Л. Анужин")
+    seller = company.get("seller_name", "Ө.Мөнхжаргал")
     
     R += 3
 
