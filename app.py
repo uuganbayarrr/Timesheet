@@ -460,7 +460,7 @@ def build_invoice(emp_list, pricing, company, doc_number="", doc_date=""):
     sc(ws, R, 7, "/", size=9, v="bottom")
     
     R += 1
-    mc(ws, R, 5, R, 6, seller, size=8, h="center", v="top")
+    mc(ws, R, 5, R, 6, seller, size=6, h="center", v="top")
 
     R += 3
     mc(ws, R, 1, R, 7,
@@ -1101,14 +1101,15 @@ def build_project_invoice(
     # SIGNATURE
     # -----------------------------
     R += 2
-    ws.row_dimensions[R].height = 18
-    mc(ws, R, 2, R, 4, value="БАТАЛГААЖУУЛСАН:", size=9, h="center")
-
+    ws.row_dimensions[R].height = 34
+    
+    mc(ws, R, 2, R, 3, "БАТАЛГААЖУУЛСАН:", size=9, h="right", v="bottom")
+    sc(ws, R, 4, "/", size=9, h="right", v="bottom")
+    mc(ws, R, 5, R, 6, "", bdr=Border(bottom=_s("thin")))
+    sc(ws, R, 7, "/", size=9, v="bottom")
+    
     R += 1
-    ws.row_dimensions[R].height = 18
-    sc(ws, R, 3, "/", size=9, h="center")
-    mc(ws, R, 4, R, 5, value=seller, size=9, h="center", bdr=_bm())
-    sc(ws, R, 6, "/", size=9, h="center")
+    mc(ws, R, 5, R, 6, seller, size=6, h="center", v="top")
 
     # -----------------------------
     # BANK INFO
