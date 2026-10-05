@@ -392,7 +392,7 @@ def build_invoice(emp_list, pricing, company, doc_number="", doc_date=""):
 
     R += 1
     ws.row_dimensions[R].height = 20
-    mc(ws, R, 1, R, 4, "Утас:", size=9, bdr=dot)
+    mc(ws, R, 1, R, 4, "УТАС:", size=9, bdr=dot)
     mc(ws, R, 3, R, 5, company.get("recipient_phone", DEFAULT_RECIPIENT_PHONE),
        size=9, bdr=dot)
     mc(ws, R, 6, R, 7, f"РО {po}", bold=True, size=10, h="center", bdr=dot)
@@ -972,7 +972,7 @@ def build_project_invoice(
     # RECIPIENT BLOCK
     # -----------------------------
     ws.row_dimensions[R].height = 22
-    sc(ws, R, 1, "ХЭНД:", bold=True, size=9, bdr=lb)
+    sc(ws, R, 5, "ХЭНД:", bold=False, size=9, bdr=lb)
     mc(
         ws, R, 2, R, 4,
         value=company.get("invoice_recipient", "Оюу толгой ХХК"),
@@ -983,7 +983,7 @@ def build_project_invoice(
     R += 1
 
     ws.row_dimensions[R].height = 46
-    sc(ws, R, 1, "ХАЯГ:", bold=True, size=9, v="top", bdr=lb)
+    sc(ws, R, 5, "ХАЯГ:", bold=False, size=9, v="top", bdr=lb)
     mc(
         ws, R, 2, R, 4,
         value=company.get("recipient_address", ""),
@@ -994,9 +994,10 @@ def build_project_invoice(
     R += 1
 
     ws.row_dimensions[R].height = 18
-    sc(ws, R, 1, "Утас:", bold=True, size=9, bdr=lb)
+    sc(ws, R, 5, "УТАС:", bold=False, size=9, bdr=lb)
     mc(ws, R, 2, R, 4, value=company.get("recipient_phone", ""), size=9, bdr=vb)
     sc(ws, R, 5, "PO:", bold=True, size=10, bdr=lb)
+    po_code  = "PO " + STR(po_code);
     mc(ws, R, 6, R, 7, value=po_code, bold=True, size=10, h="center", bdr=vb)
     R += 1
 
@@ -1149,7 +1150,7 @@ def build_project_invoice(
 
     R += 1
     sc(ws, R, 6, "И-мэйл:", size=9, h="right")
-    sc(ws, R, 7, company.get("seller_email", "munkhjargal.u@novelsoft.mn"), size=6, color=MID_BLUE)
+    sc(ws, R, 7, company.get("seller_email", "munkhjargal.u@novelsoft.mn"), size=7, color=MID_BLUE)
 
     # -----------------------------
     # PRINT AREA
