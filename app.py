@@ -454,11 +454,10 @@ def build_invoice(emp_list, pricing, company, doc_number="", doc_date=""):
     R += 2
     ws.row_dimensions[R].height = 34
     mc(ws, R, 2, R, 3, "БАТАЛГААЖУУЛСАН:", size=9, h="right", v="bottom")
-    mc(ws, R, 4, R, 6, "", bdr=Border(bottom=_s("thin")))
-    R += 1
     sc(ws, R, 4, "/", size=9)
     mc(ws, R, 5, R, 6, seller, size=8, h="center")
     sc(ws, R, 7, "/", size=9)
+    mc(ws, R, 4, R, 6, "", bdr=Border(bottom=_s("thin")))
 
     # thick black line
     R += 1
