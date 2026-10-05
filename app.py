@@ -463,7 +463,7 @@ def build_invoice(emp_list, pricing, company, doc_number="", doc_date=""):
     R += 1
     ws.row_dimensions[R].height = 6
     for c in range(1, 8):
-        ws.cell(R, c).border = Border(bottom=_s("thick"))
+        ws.cell(R, c).border = Border(top=_s("thick"))
 
     R += 3
     mc(ws, R, 1, R, 7,
