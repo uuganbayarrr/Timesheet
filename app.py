@@ -2075,7 +2075,7 @@ with tab_proj:
                         "zip_bytes": zip_proj.getvalue(),
                     }
 
-                st.success("PDF үүсгэлээ! Доор татаж авна уу. Ануууууууу")
+                st.success("PDF үүсгэлээ! Доор татаж авна уу.")
 
             if st.session_state.proj_generated_files:
                 st.download_button(
