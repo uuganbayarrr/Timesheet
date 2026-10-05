@@ -451,19 +451,52 @@ def build_invoice(emp_list, pricing, company, doc_number="", doc_date=""):
     R = t3
 
     # ── Signature ──
-    R += 2
-    ws.row_dimensions[R].height = 34
-    mc(ws, R, 2, R, 3, "БАТАЛГААЖУУЛСАН:", size=9, h="right", v="bottom")
-    
-    sc(ws, R, 4, "/", size=9, h="right", v="bottom")
-    mc(ws, R, 5, R, 6, seller, size=8, h="center", v="top", bdr=Border(top=_s("thin")))
-    sc(ws, R, 7, "/", size=9, v="bottom")
+        # ── Signature ──
+R += 2
 
-    # thick black line
+    # 1-р мөр: Баталгаажуулсан + гарын үсгийн шугам
+    ws.row_dimensions[R].height = 28
+    
+    mc(ws, R, 2, R, 3,
+       "БАТАЛГААЖУУЛСАН:",
+       size=9,
+       h="right",
+       v="bottom")
+    
+    sc(ws, R, 4,
+       "/",
+       size=9,
+       h="right",
+       v="bottom")
+    
+    # Гарын үсгийн шугам
+    mc(ws, R, 5, R, 6,
+       "",
+       size=8,
+       h="center",
+       v="bottom")
+    
+    for col in range(5, 7):
+        ws.cell(R, col).border = Border(
+            bottom=_s("thin")
+        )
+    
+    sc(ws, R, 7,
+       "/",
+       size=9,
+       h="left",
+       v="bottom")
+    
+    
+    # 2-р мөр: seller нэр
     R += 1
-    ws.row_dimensions[R].height = 6
-    for c in range(1, 8):
-        ws.cell(R, c).border = Border(top=_s("thick"))
+    ws.row_dimensions[R].height = 14
+
+    mc(ws, R, 5, R, 6,
+       seller,
+       size=8,
+       h="center",
+       v="top")
 
     R += 3
     mc(ws, R, 1, R, 7,
