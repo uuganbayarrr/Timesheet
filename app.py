@@ -456,7 +456,7 @@ def build_invoice(emp_list, pricing, company, doc_number="", doc_date=""):
     mc(ws, R, 2, R, 3, "БАТАЛГААЖУУЛСАН:", size=9, h="right", v="bottom")
     
     sc(ws, R, 4, "/", size=9, h="right", v="bottom")
-    mc(ws, R, 5, R, 6, seller, size=8, h="center", v="bottom", bdr=Border(top=_s("thin")))
+    mc(ws, R, 5, R, 6, seller, size=8, h="center", v="top", bdr=Border(top=_s("thin")))
     sc(ws, R, 7, "/", size=9, v="bottom")
 
     # thick black line
