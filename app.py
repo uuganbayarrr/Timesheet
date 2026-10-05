@@ -454,8 +454,9 @@ def build_invoice(emp_list, pricing, company, doc_number="", doc_date=""):
     R += 2
     ws.row_dimensions[R].height = 34
     mc(ws, R, 2, R, 3, "БАТАЛГААЖУУЛСАН:", size=9, h="right", v="bottom")
+    
     sc(ws, R, 4, "/", size=9, h="right", v="bottom")
-    mc(ws, R, 5, R, 6, seller, size=8, h="center", v="bottom", bdr=Border(bottom=_s("thin")))
+    mc(ws, R, 5, R, 6, seller, size=8, h="center", v="bottom", bdr=Border(top=_s("thin")))
     sc(ws, R, 7, "/", size=9, v="bottom")
 
     # thick black line
@@ -1334,7 +1335,7 @@ def build_project_zarlagiin(po_code, po_data, company, doc_number="", doc_date="
 
     # Recipient / Number
     ws.row_dimensions[R].height = 34
-    sc(ws, R, 1, "Нэр:", size=9, bdr=ib)
+    sc(ws, R, 1, "НЭР:", size=9, bdr=ib)
     mc(
         ws, R, 2, R, 4,
         value=company.get("invoice_recipient", "Оюу толгой ХХК"),
@@ -1346,7 +1347,7 @@ def build_project_zarlagiin(po_code, po_data, company, doc_number="", doc_date="
 
     # Address / Date
     ws.row_dimensions[R].height = 46
-    sc(ws, R, 1, "Хаяг:", size=9, v="top", bdr=ib)
+    sc(ws, R, 1, "ХАЯГ:", size=9, v="top", bdr=ib)
     mc(
         ws, R, 2, R, 4,
         value=company.get(
@@ -1355,7 +1356,7 @@ def build_project_zarlagiin(po_code, po_data, company, doc_number="", doc_date="
             "Сүхбаатар дүүрэг, Чингисийн өргөн\n"
             "чөлөө - 15, “Моннис” цамхаг"
         ),
-        size=9, wrap=True, h="left", v="top", bdr=ib
+        size=9, wrap=True, h="center", v="top", bdr=ib
     )
     sc(ws, R, 5, "ОГНОО:", size=9, bdr=ib)
     mc(ws, R, 6, R, 7, value=doc_date, size=10, h="center", bdr=ib)
