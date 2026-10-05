@@ -524,9 +524,9 @@ def build_zarlagiin(emp_list, pricing, company, doc_number="", doc_date=""):
 
     if logo_path and os.path.exists(logo_path):
         img = XLImage(logo_path)
-        img.width = 160
-        img.height = 30
-        img.anchor = "F1"
+        img.width = 155
+        img.height = 35
+        img.anchor = "F2"
         ws.add_image(img)
 
     ws.row_dimensions[R].height = 16
