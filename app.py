@@ -441,12 +441,9 @@ def build_invoice(emp_list, pricing, company, doc_number="", doc_date="2/25/2026
     ws.row_dimensions[R].height = 18
     mc(ws, R, 2, R, 4, value="БАТАЛГААЖУУЛСАН:", size=9, h="center")
     seller = company.get("seller_name", "Ө.Мөнхжаргал")
-
-    R += 1
-    ws.row_dimensions[R].height = 18
-    sc(ws, R, 3, "/", size=9, h="center")
-    mc(ws, R, 4, R, 5, value=seller, size=9, h="center", bdr=_bm())
-    sc(ws, R, 6, "/", size=9, h="center")
+    sc(ws, R, 5, "/", size=9, h="center")
+    mc(ws, R, 6, R, 7, value=seller, size=9, h="center", bdr=_bm())
+    sc(ws, R, 8, "/", size=9, h="center")
 
     R += 3
     ws.row_dimensions[R].height = 16
