@@ -1,20 +1,11 @@
 {
   "employees": [
     {
-      "sap_number": "9566838",
-      "employee_name": "Barsbold",
-      "level": "senior",
-      "ot_leader_name": "Gandeleg Ganbaatar",
-      "cost_code": "49022801",
-      "po_code": "3106789574",
-      "product_code": null
-    },
-    {
       "sap_number": "9471634",
       "employee_name": "Tsogttulga",
       "level": "senior",
       "ot_leader_name": "Uuganbayar Ganbaatar, Myagmarsuren Sanaakhorol",
-      "cost_code": "49056708",
+      "cost_code": "49011402",
       "po_code": "3106789575",
       "product_code": null
     },
@@ -23,7 +14,7 @@
       "employee_name": "Zoljargal",
       "level": "senior",
       "ot_leader_name": "Uuganbayar Ganbaatar, Myagmarsuren Sanaakhorol",
-      "cost_code": "49056708",
+      "cost_code": "49011402",
       "po_code": "3106789575",
       "product_code": null
     },
@@ -32,17 +23,17 @@
       "employee_name": "Urtnasan",
       "level": "senior",
       "ot_leader_name": "Uuganbayar Ganbaatar, Myagmarsuren Sanaakhorol",
-      "cost_code": "49056708",
+      "cost_code": "49011402",
       "po_code": "3106789575",
       "product_code": null
     },
     {
-      "sap_number": "9577859",
-      "employee_name": "Badral",
+      "sap_number": null,
+      "employee_name": "Selenge",
       "level": "senior",
-      "ot_leader_name": "Uuganbayar Ganbaatar, Myagmarsuren Sanaakhorol",
-      "cost_code": "49056708",
-      "po_code": "3106789575",
+      "ot_leader_name": null,
+      "cost_code": null,
+      "po_code": "3106789606",
       "product_code": null
     },
     {
@@ -55,12 +46,12 @@
       "product_code": null
     },
     {
-      "sap_number": "9530800",
-      "employee_name": "Tsogtbayar",
-      "level": "senior",
-      "ot_leader_name": "Khorolsuren Ganzorig",
-      "cost_code": "49011406",
-      "po_code": "3106789583",
+      "sap_number": null,
+      "employee_name": "Tuguldur",
+      "level": "junior",
+      "ot_leader_name": null,
+      "cost_code": null,
+      "po_code": "3106792948",
       "product_code": null
     },
     {
@@ -68,17 +59,17 @@
       "employee_name": "Jamsranjav",
       "level": "senior",
       "ot_leader_name": "Khorolsuren Ganzorig",
-      "cost_code": "49011406",
-      "po_code": "3106789583",
+      "cost_code": "49022801",
+      "po_code": "3106789574",
       "product_code": null
     },
     {
       "sap_number": null,
-      "employee_name": "Undarmal",
+      "employee_name": "Nandin",
       "level": "junior",
-      "ot_leader_name": "Gankhuyag Galbadrakh",
-      "cost_code": "49071227",
-      "po_code": "3106789584",
+      "ot_leader_name": "Ganbat Sukh",
+      "cost_code": "49090417",
+      "po_code": "3106789612",
       "product_code": null
     },
     {
@@ -93,19 +84,19 @@
     {
       "sap_number": null,
       "employee_name": "Tsagaantsooj",
-      "level": "junior",
+      "level": "senior",
       "ot_leader_name": "Munkh-Erdene Amarsanaa",
       "cost_code": "49011400",
       "po_code": "3106789579",
       "product_code": null
     },
     {
-      "sap_number": "9548971",
-      "employee_name": "Anar",
+      "sap_number": null,
+      "employee_name": "Azbileg",
       "level": "junior",
-      "ot_leader_name": "Ganbat Sukh",
-      "cost_code": "49090417",
-      "po_code": "3106789612",
+      "ot_leader_name": "Munkhbayar Mishig",
+      "cost_code": "49071226",
+      "po_code": "3106789606",
       "product_code": null
     },
     {
@@ -114,7 +105,7 @@
       "level": "junior",
       "ot_leader_name": "Ganbat Sukh",
       "cost_code": "49090417",
-      "po_code": "3104808953",
+      "po_code": "3106789612",
       "product_code": null
     },
     {
@@ -188,7 +179,16 @@
       "cost_code": "49056708",
       "po_code": "3106789575",
       "product_code": null
-    }
+    },
+    {
+      "sap_number": null,
+      "employee_name": "Amarzaya",
+      "level": "senior",
+      "ot_leader_name": "Uuganbayar Ganbaatar, Myagmarsuren Sanaakhorol",
+      "cost_code": "49056708",
+      "po_code": "3106789575",
+      "product_code": null
+    },
   ],
   "company": {
     "invoice_recipient": "Оюу толгой ХХК",
@@ -202,7 +202,8 @@
     "bank_account": "10 0004000 435005688 (₮)"
   },
   "pricing": {
-    "junior_unit_price": 25200,
-    "senior_unit_price": 32500
+    "junior_unit_price": 26700,
+    "senior_unit_price": 34500,
+    "site_unit_price": 40700
   }
 }
