@@ -171,7 +171,7 @@
       "po_code": "3104808950",
       "product_code": null
     },
-      {
+    {
       "sap_number": "1006537",
       "employee_name": "Munkhtur",
       "level": "senior",
@@ -188,7 +188,7 @@
       "cost_code": "49056708",
       "po_code": "3106789575",
       "product_code": null
-    },
+    }
   ],
   "company": {
     "invoice_recipient": "Оюу толгой ХХК",
